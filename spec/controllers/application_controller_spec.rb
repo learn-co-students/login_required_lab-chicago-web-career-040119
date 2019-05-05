@@ -4,7 +4,7 @@ RSpec.describe ApplicationController do
   describe 'current_user' do
     it 'returns the name of the current user' do
       i_am = 'Kate Libby'
-      @request.session[:name] = i_am
+      @request.session[:current_user] = i_am
       expect(subject.current_user).to eq i_am
     end
 
